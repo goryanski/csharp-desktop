@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice", "Practice\Practice.csproj", "{7F359985-EDD3-4021-94D5-D4ACFA29EC11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice2", "Practice2\Practice2.csproj", "{3D1CF99B-F921-4806-97CD-8C6DD49828D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice3", "Practice3\Practice3.csproj", "{158F5359-5F04-43BD-AEDC-9AB0226A623D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F359985-EDD3-4021-94D5-D4ACFA29EC11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F359985-EDD3-4021-94D5-D4ACFA29EC11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F359985-EDD3-4021-94D5-D4ACFA29EC11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F359985-EDD3-4021-94D5-D4ACFA29EC11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D1CF99B-F921-4806-97CD-8C6DD49828D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D1CF99B-F921-4806-97CD-8C6DD49828D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D1CF99B-F921-4806-97CD-8C6DD49828D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D1CF99B-F921-4806-97CD-8C6DD49828D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158F5359-5F04-43BD-AEDC-9AB0226A623D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158F5359-5F04-43BD-AEDC-9AB0226A623D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158F5359-5F04-43BD-AEDC-9AB0226A623D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158F5359-5F04-43BD-AEDC-9AB0226A623D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C258277C-BE19-4659-A289-A0CFC1BE1A0B}
+	EndGlobalSection
+EndGlobal
