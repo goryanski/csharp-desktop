@@ -1,0 +1,75 @@
+﻿<Window x:Class="WpfApp1.Windows.ProductEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Windows"
+        mc:Ignorable="d"
+        Title="ProductEditor" Height="350" Width="400" Background="#b3e4fc">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*" />
+            <ColumnDefinition Width="0.6*" />
+        </Grid.ColumnDefinitions>
+
+        
+        <!--Text for input fields-->
+        <TextBlock Text="Product name:"
+                   Grid.Row="1"
+                   Style="{StaticResource tbStandartStyle}"/>
+        <TextBlock Text="Product price:"
+                   Grid.Row="2"
+                   Style="{StaticResource tbStandartStyle}"/>
+        <TextBlock Text="Category:"                   
+                   Grid.Row="3"
+                   Style="{StaticResource tbStandartStyle}"/>
+
+        
+        <!--Input fields-->
+        <TextBox Name="tbName" 
+                 Text="{Binding Product.Name}"                
+                 Grid.Column="1" Grid.Row="1"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbPrice" 
+                 Text="{Binding Product.Price}"
+                 Grid.Column="1" Grid.Row="2"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <ComboBox x:Name="cbCategories" ItemsSource="{Binding Categories}" 
+                  Grid.Column="1" Grid.Row="3"
+                  Margin="20 0"
+                  Height="20"
+                  VerticalAlignment="Center">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+
+
+        <Button Content="Cancel"
+                Click="ButtonCancel_Click"
+                VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                Grid.Row="4"
+                Width="100" Height="40"
+                Style="{StaticResource btnStandartStyle}"
+                Margin="0 0 0 40"/>
+        <Button Content="Save"
+                Click="ButtonSave_Click"
+                VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                Grid.Row="4" Grid.Column="1"
+                Width="100" Height="40"
+                Style="{StaticResource btnStandartStyle}"
+                Margin="0 0 0 40"/>
+    </Grid>
+</Window>

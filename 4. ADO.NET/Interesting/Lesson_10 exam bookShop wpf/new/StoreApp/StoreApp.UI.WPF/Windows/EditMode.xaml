@@ -1,0 +1,60 @@
+﻿<Window x:Class="StoreApp.UI.WPF.Windows.EditMode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StoreApp.UI.WPF.Windows"
+        mc:Ignorable="d"
+        Title="EditMode" Height="400" Width="400" Background="#b3e4fc">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.4*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="1" 
+                Name="btnWritOff"
+                Content="Write off"    
+                Click="BtnWriteOff_Click"
+                Style="{StaticResource btnOrangeStyle}"
+                Margin="20">
+        </Button>
+        <Button Grid.Row="2"  
+                Name="btnSetAside"
+                Content="set aside" 
+                Click="BtnSetAside_Click"
+                Style="{StaticResource btnOrangeStyle}"
+                Margin="20">
+        </Button>
+        <Button Grid.Column="1" Grid.Row="1" 
+                Name="btnSetDiscount"
+                Content="Set discount"       
+                Click="BtnSetDiscount_Click"
+                Style="{StaticResource btnOrangeStyle}"
+                Margin="20">
+        </Button>
+        <Button Grid.Column="1" Grid.Row="2" 
+                Content="Edit Fields"
+                Name="btnEditFields"
+                Click="BtnEditFields_Click"
+                Style="{StaticResource btnOrangeStyle}"
+                Margin="20">
+        </Button>
+
+
+        <Button Content="Back"
+                Name="btnBack"
+                Click="BtnBack_Click"
+                VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                Grid.Row="17" Grid.ColumnSpan="2"
+                Width="100" Height="40"
+                Style="{StaticResource btnStandartStyle}"
+                Margin="0 0 0 20"/>
+    </Grid>
+</Window>

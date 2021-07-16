@@ -1,0 +1,148 @@
+﻿<Window x:Class="StoreApp.UI.WPF.Windows.BooksEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StoreApp.UI.WPF.Windows"
+        mc:Ignorable="d"
+        Title="BooksEditor" Height="650" Width="500"  Background="#b3e4fc">
+    <Grid> 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.03*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.13*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*" />
+            <ColumnDefinition Width="0.6*" />
+        </Grid.ColumnDefinitions>
+
+        <!--Text for input fields-->
+        <TextBlock Text="Book name:"
+                   Grid.Row="1"
+                   Style="{StaticResource tbStandartStyle}"/>
+        <TextBlock Text="Count Pages:"
+                   Grid.Row="2"
+                   Style="{StaticResource tbStandartStyle}"/>
+        <TextBlock Text="Genre:"                   
+                   Grid.Row="3"
+                   Style="{StaticResource tbStandartStyle}"/>
+        <TextBlock Text="Prime Cost:"                   
+                   Grid.Row="4"
+                   Style="{StaticResource tbStandartStyle}"/>
+        <TextBlock Text="Price:"                   
+                   Grid.Row="5"
+                   Style="{StaticResource tbStandartStyle}"/>
+        <TextBlock Text="Discount:"                   
+                   Grid.Row="6"
+                   Style="{StaticResource tbStandartStyle}"/>
+        <TextBlock Text="Publish Year:"                   
+                   Grid.Row="7"
+                   Style="{StaticResource tbStandartStyle}"/>
+        <TextBlock Text="Amount In Storage:"                   
+                   Grid.Row="8"
+                   Style="{StaticResource tbStandartStyle}"/>
+        <TextBlock Text="Publishing Office:"                   
+                   Grid.Row="9"
+                   Style="{StaticResource tbStandartStyle}"/>
+        <TextBlock Text="Authors:"                   
+                   Grid.Row="10"
+                   Style="{StaticResource tbStandartStyle}"/>
+        <TextBlock Text="Sequel:"                   
+                   Grid.Row="15"
+                   Style="{StaticResource tbStandartStyle}"/>
+
+
+        <!--Input fields-->
+        <TextBox Name="tbName" 
+                 Text="{Binding Book.Name}"                
+                 Grid.Column="1" Grid.Row="1"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbPages" 
+                 Text="{Binding Book.Pages}"
+                 Grid.Column="1" Grid.Row="2"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbGenre" 
+                 Text="{Binding Book.Genre}"
+                 Grid.Column="1" Grid.Row="3"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbPrimeCost" 
+                 Text="{Binding Book.PrimeCost}"
+                 Grid.Column="1" Grid.Row="4"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbPrice" 
+                 Text="{Binding Book.Price}"
+                 Grid.Column="1" Grid.Row="5"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbDiscount" 
+                 Text="{Binding Book.Discount}"
+                 Grid.Column="1" Grid.Row="6"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbPublishYear" 
+                 Text="{Binding Book.PublishYear}"
+                 Grid.Column="1" Grid.Row="7"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbAmountInStorage" 
+                 Text="{Binding Book.AmountInStorage}"
+                 Grid.Column="1" Grid.Row="8"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbPublishingOffice" 
+                 Text="{Binding PublishingOffice}"
+                 Grid.Column="1" Grid.Row="9"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbAuthor1" 
+                 Text="{Binding AuthorsList[0]}"
+                 Grid.Column="1" Grid.Row="10"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbAuthor2" 
+                 Text="{Binding AuthorsList[1]}"
+                 Grid.Column="1" Grid.Row="11"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbAuthor3" 
+                 Text="{Binding AuthorsList[2]}"
+                 Grid.Column="1" Grid.Row="12"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbAuthor4" 
+                 Text="{Binding AuthorsList[3]}"
+                 Grid.Column="1" Grid.Row="13"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <TextBox Name="tbAuthor5" 
+                 Text="{Binding AuthorsList[4]}"
+                 Grid.Column="1" Grid.Row="14"
+                 Style="{StaticResource tbxStandartStyle}"/>
+        <CheckBox Name="chbIsSequel" 
+                  Grid.Column="1" Grid.Row="15"
+                  Style="{StaticResource chbStandartStyle}"/>
+
+
+        <Button Content="Cancel"
+                Click="ButtonCancel_Click"
+                VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                Grid.Row="17"
+                Width="100" Height="40"
+                Style="{StaticResource btnStandartStyle}"
+                Margin="0 0 0 20"/>
+        <Button Content="Save"
+                Click="ButtonSave_Click"
+                VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                Grid.Row="17" Grid.Column="1"
+                Width="100" Height="40"
+                Style="{StaticResource btnStandartStyle}"
+                Margin="0 0 0 20"/>
+
+    </Grid>
+</Window>
