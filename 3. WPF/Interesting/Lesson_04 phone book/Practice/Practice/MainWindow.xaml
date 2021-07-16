@@ -1,0 +1,84 @@
+﻿<Window x:Class="Practice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice"
+        mc:Ignorable="d"
+        Closing="Window_Closing"
+        Title="MainWindow" Height="320" Width="400" 
+        Background="{StaticResource  wndBckgColor}">
+
+    <Grid Margin="5px">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="353*" />
+            <ColumnDefinition Width="140*" />
+        </Grid.ColumnDefinitions>
+
+        <ListBox Name="lbContacts" Grid.RowSpan="4" Margin="10px"              
+                 ItemsSource="{Binding Path=Contacts}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="5px">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.2*"/>
+                            <ColumnDefinition Width="0.8*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- свойства картинки нет смысла выносить в ресурсы, они уникальные 
+                         для этой картинки -->
+                        <Image Width="60px" 
+                               Height="60px"
+                               Source="{Binding Photo}" 
+                               Stretch="Fill"/>
+                        
+                        <StackPanel Margin="5px 0" Grid.Column="1">
+                            <TextBlock Text="{Binding FirstName}"
+                                       Padding="{StaticResource tbPadding}" 
+                                       FontSize="{StaticResource tbFontSize}" 
+                                       FontWeight="{StaticResource tbFontWeight}" />
+                            <TextBlock Text="{Binding LastName}"
+                                       Padding="{StaticResource tbPadding}" 
+                                       FontSize="{StaticResource tbFontSize}" 
+                                       FontWeight="{StaticResource tbFontWeight}" />
+                        </StackPanel>
+
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+
+        <Button Content="Add" Click="ButtonAdd_Click" 
+                Grid.Column="1" 
+                Margin="{StaticResource btnMargin}"
+                Background="{StaticResource btnBckgColor}"
+                FontFamily="{StaticResource btnFontFamily}"
+                FontWeight="{StaticResource btnFontWeight}"/>
+        <Button Content="Edit" Click="ButtonEdit_Click"  
+                Grid.Column="1" Grid.Row="1" 
+                Margin="{StaticResource btnMargin}"
+                Background="{StaticResource btnBckgColor}"
+                FontFamily="{StaticResource btnFontFamily}"
+                FontWeight="{StaticResource btnFontWeight}"/>
+        <Button Content="Delete" Click="ButtonDelete_Click" 
+                Grid.Column="1" Grid.Row="2" 
+                Margin="{StaticResource btnMargin}"
+                Background="{StaticResource btnBckgColor}"
+                FontFamily="{StaticResource btnFontFamily}"
+                FontWeight="{StaticResource btnFontWeight}"/>
+        <Button Content="Show" Click="ButtonShow_Click" 
+                Grid.Column="1" Grid.Row="3" 
+                Margin="{StaticResource btnMargin}"
+                Background="{StaticResource btnBckgColor}"
+                FontFamily="{StaticResource btnFontFamily}"
+                FontWeight="{StaticResource btnFontWeight}"/>
+    </Grid>
+</Window>

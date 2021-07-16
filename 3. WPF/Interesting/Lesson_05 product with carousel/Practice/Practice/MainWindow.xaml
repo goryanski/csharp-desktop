@@ -1,0 +1,27 @@
+﻿<Window x:Class="Practice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice"
+         xmlns:myControls="clr-namespace:Practice.Controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="500">
+    <Grid>
+        <!--Отсюда можем полностью настроить наш товар удобным способом, так же можем изменить 
+        картинки для товара - для этого нам нужно просто создать новую папку в проекте 
+        (в папке Images) и добавить туда любое кол-во фотографий, в свойство ImagesFolder 
+        написать название этой папки и в товар добавится карусель с этими фотографиями. так же 
+        в зависимости от значения свойства Rating будет изменяться кол-во звездочек рейтинга-->
+        <myControls:Product Title="Ракетка для тенниса DHS 5002C"
+                            ImagesFolder="tennis_racquet"
+                            Price="500"
+                            Description="Это модель для опытных игроков, предпочитающих агрессивную игру в атаке и сложные удары. Оснащена семислойным  основание ALL с двумя карбоновыми слоями, накладки Hurricane 3 и Skyline 3, толщина губки 2,2 мм. Ракетки торговой марки DHS отличаются свой надежностью и высоким качеством исполнения. Комплектуется фирменным защитным чехлом."
+                            Seller="Валера"
+                            Rating="9"
+                            
+                            VerticalAlignment="Center" HorizontalAlignment="Center"
+                            Width="220" Height="400"/>
+    </Grid>
+</Window>
+ 

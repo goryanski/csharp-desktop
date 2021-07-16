@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Practice.Resources"
+                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!--Buttons-->
+    <SolidColorBrush x:Key="btnBckgColor" Color="#4dc4ff"/>
+    <Thickness x:Key="btnMargin" Left="10" Right="10" Top="10" Bottom="10"/>
+    <FontFamily x:Key="btnFontFamily">Perpetua Titling MT</FontFamily>
+    <FontWeight x:Key="btnFontWeight">DemiBold</FontWeight>
+    <sys:Double x:Key="btnHeight">40</sys:Double>
+    <sys:Double x:Key="btnWidth">100</sys:Double>
+
+    <!--TextBlocks-->
+    <Thickness x:Key="tbPadding" Left="5" Right="5" Top="5" Bottom="5"/>
+    <FontWeight x:Key="tbFontWeight">Bold</FontWeight>
+    <sys:Double x:Key="tbFontSize">16</sys:Double>
+    <FontStyle x:Key="tbFontStyle">Italic</FontStyle>
+
+    <!--TextBox-->
+    <sys:Double x:Key="tbHeight">20</sys:Double>
+    <Thickness x:Key="tbMargin" Left="20" Right="20" Top="0" Bottom="0"/>
+
+
+    <!--Alignments-->
+    <!--Tолько для TextBlock с ViewContactForm что бы можно было отсюда легко поменять расположение всех TextBlock с 
+    информацией о пользователе-->
+    <VerticalAlignment x:Key="InfoVerticalAlignment">Center</VerticalAlignment>
+    <HorizontalAlignment x:Key="InfoHorizontalAlignment">Center</HorizontalAlignment>
+    <!--Tолько для TextBlock c EditWindow, что бы можно было отсюда легко поменять расположение подписе к полям ввода-->
+    <VerticalAlignment x:Key="DescriptionVerticalAlignment">Center</VerticalAlignment>
+    <HorizontalAlignment x:Key="DescriptionHorizontalAlignment">Right</HorizontalAlignment>
+    <!--Tолько для TextBox c EditWindow, что бы можно было отсюда легко поменять расположение полей ввода-->
+    <VerticalAlignment x:Key="FieldVerticalAlignment">Center</VerticalAlignment>
+
+    
+    <!--Images-->
+    <Thickness x:Key="imgMargin" Left="10" Right="10" Top="10" Bottom="10"/>
+
+    <!--Windows Background-->
+    <SolidColorBrush x:Key="wndBckgColor" Color="#b3e4fc"/>
+
+</ResourceDictionary>

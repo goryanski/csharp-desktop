@@ -1,0 +1,58 @@
+﻿<Window x:Class="Practice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="400" Background="Orange"
+        Closing="Window_Closing">
+    <Grid Margin="0, 20, 0, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*" />
+            <ColumnDefinition Width="0.7*" />
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock Text="Login"
+                   VerticalAlignment="Center" HorizontalAlignment="Right"
+                   FontSize="16"
+                   FontStyle="Italic"/>
+        <TextBlock Text="Password"
+                   VerticalAlignment="Center" HorizontalAlignment="Right"
+                   FontSize="16"
+                   Grid.Row="1"
+                   FontStyle="Italic"/>
+        
+
+        <TextBox  Name="tbLogin" 
+                  Grid.Column="1" 
+                  Margin="20 15 40 15"/>
+        <TextBox  Name="tbPassword"
+                  Grid.Column="1" Grid.Row="1" 
+                  Margin="20 15 40 15"/>
+        
+        <CheckBox Name="cbRememberMe" Content="Remember me"
+                  Grid.Row="2"  Grid.Column="2" 
+                  Margin="20 0 0 20"
+                  VerticalAlignment="Center" 
+                  FontSize="15" FontStyle="Italic"/>
+
+        <Button  Grid.Row="3"  Grid.ColumnSpan="2"
+                 Width="120" Height="30"
+                 Margin="0 0 0 10"
+                 Content="Log in"
+                 Click="ButtonLogIn_Click"
+                 FontFamily="Perpetua Titling MT"
+                 FontWeight="Bold"
+                 Background="#ff7c03"
+                 BorderBrush="Black"/>
+    </Grid>
+</Window>

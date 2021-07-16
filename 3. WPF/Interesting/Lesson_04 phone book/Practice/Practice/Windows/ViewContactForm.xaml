@@ -1,0 +1,62 @@
+﻿<Window x:Class="Practice.Windows.ViewContactForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice.Windows"
+        mc:Ignorable="d"
+        Title="ViewContactForm" Height="450" Width="300"  
+         Background="{StaticResource  wndBckgColor}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="{Binding Person.Photo}"
+               Margin="{StaticResource imgMargin}" />
+
+        <TextBlock Text="{Binding Person.FirstName}"
+                   Grid.Row="1"
+                   VerticalAlignment="{StaticResource InfoVerticalAlignment}"  
+                   HorizontalAlignment="{StaticResource InfoHorizontalAlignment}" 
+                   FontSize="{StaticResource tbFontSize}"
+                   FontStyle="{StaticResource tbFontStyle}"/>
+        <TextBlock Text="{Binding Person.LastName}"
+                   Grid.Row="2"
+                   FontSize="{StaticResource tbFontSize}"
+                   VerticalAlignment="{StaticResource InfoVerticalAlignment}"  
+                   HorizontalAlignment="{StaticResource InfoHorizontalAlignment}" 
+                   FontStyle="{StaticResource tbFontStyle}"/>
+        <TextBlock Text="{Binding Person.PhoneNumber}"
+                   Grid.Row="3"
+                   VerticalAlignment="{StaticResource InfoVerticalAlignment}"  
+                   HorizontalAlignment="{StaticResource InfoHorizontalAlignment}" 
+                   FontSize="{StaticResource tbFontSize}"
+                   FontStyle="{StaticResource tbFontStyle}"/>
+        <TextBlock Text="{Binding Person.Address}"
+                   Grid.Row="4"
+                   VerticalAlignment="{StaticResource InfoVerticalAlignment}"  
+                   HorizontalAlignment="{StaticResource InfoHorizontalAlignment}" 
+                   FontSize="{StaticResource tbFontSize}"
+                   FontStyle="{StaticResource tbFontStyle}"/>
+
+        <Button Content="Ok"
+                Click="BtnOk_Click" 
+                Grid.Row="5"
+                Width="{StaticResource btnWidth}" 
+                Height="{StaticResource btnHeight}"
+                Margin="0 0 0 20"
+                VerticalAlignment="Bottom"  
+                HorizontalAlignment="Center" 
+                Background="{StaticResource btnBckgColor}"
+                FontFamily="{StaticResource btnFontFamily}"
+                FontWeight="{StaticResource btnFontWeight}"/>
+        
+    </Grid>
+</Window>

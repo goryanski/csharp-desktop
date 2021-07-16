@@ -1,0 +1,82 @@
+﻿<Window x:Class="Practice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice"
+         xmlns:myControls="clr-namespace:Practice.Controls"
+        mc:Ignorable="d"
+        Title="https://tennisok.com.ua/products/admin-panel"
+        Height="600" Width="835" MinWidth="835" MinHeight="500"
+        Closing="Window_Closing">
+
+    <Window.Resources>
+        <Style x:Key="lbStyle" TargetType="ListBox">
+            <Style.Triggers >
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#fffdd1"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Background="#b3e4fc" Grid.ColumnSpan="4"/>
+
+        <Button Content="Add"
+                    Name="btnAdd"
+                    Click="BtnAdd_Click" 
+                    HorizontalAlignment="Right"
+                    Style="{StaticResource bounceButton}"/>
+        <Button Content="Edit"
+                    Name="btnEdit"
+                    Click="BtnEdit_Click" 
+                    Grid.Column="1"
+                    Margin="15 0 0 0"
+                    Style="{StaticResource bounceButton}"/>
+        <Button Content="Delete"
+                    Name="btnDelete"
+                    Click="BtnDelete_Click" 
+                    Grid.Column="2"
+                     Margin="0 0 15 0"
+                    Style="{StaticResource bounceButton}"/>
+        <Button Content="Show details"
+                    Name="btnShowDetails"
+                    Click="BtnShowDetails_Click" 
+                    Grid.Column="3"
+                    HorizontalAlignment="Left"
+                    Width="120"
+                    Style="{StaticResource bounceButton}"/>
+
+
+        <ListBox x:Name="lbProducts"  
+                 ItemsSource="{Binding Products}" 
+                 Style="{StaticResource lbStyle}"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 Grid.Row="1"
+                 Grid.ColumnSpan="4">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <myControls:Product  Margin="20" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

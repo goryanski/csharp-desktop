@@ -1,0 +1,57 @@
+﻿<Application x:Class="Practice.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Practice"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!--только кнопки (они общие для всех окон)-->
+        <Style x:Key="btnStandartStyle" TargetType="Button">
+            <Style.Setters>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Width" Value="80"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Background" Value="#4dc4ff"/>
+                <Setter Property="FontFamily" Value="Perpetua Titling MT"/>
+                <Setter Property="FontWeight" Value="DemiBold"/>
+            </Style.Setters>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Height" Value="40"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Foreground" Value="#2482ff"/>
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect BlurRadius="10" Color="#4dc4ff" />
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+               
+        <Style x:Key="btnEditStyle" TargetType="Button" BasedOn="{StaticResource btnStandartStyle}">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="40"/>
+        </Style>
+
+        <Style x:Key="bounceButton" TargetType="Button" BasedOn="{StaticResource btnStandartStyle}">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard TargetProperty="Margin">
+                                <ThicknessAnimation  To="0 0 0 10"
+                                         AutoReverse="True"
+                                         RepeatBehavior="Forever"
+                                         Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </Application.Resources>
+</Application>
